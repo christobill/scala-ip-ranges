@@ -12,4 +12,47 @@ class Gen {
   }
 }
 
+object FakeIP{
+  def apply(
+             aS : String,
+             bS : String,
+             cS : String,
+             dS : String) :IP = {
+    val a = Random.nextInt & 255
+    val b = Random.nextInt & 255
+    val c = Random.nextInt & 255
+    val d = Random.nextInt & 255
+    IP(a << 24 | b << 16 | c << 8 | d)
+  }
+
+  def apply(
+             a : Int,
+             bS : String,
+             cS : String,
+             dS : String) :IP = {
+    val b = Random.nextInt & 255
+    val c = Random.nextInt & 255
+    val d = Random.nextInt & 255
+    IP(a << 24 | b << 16 | c << 8 | d)
+  }
+
+  def apply(
+             a : Int,
+             b : Int,
+             cS : String,
+             dS : String) :IP = {
+    val c = Random.nextInt & 255
+    val d = Random.nextInt & 255
+    IP(a << 24 | b << 16 | c << 8 | d)
+  }
+
+  def apply(
+             a : Int,
+             b : Int,
+             c : Int,
+             dS : String) :IP = {
+    val d = Random.nextInt & 255
+    IP(a << 24 | b << 16 | c << 8 | d)
+  }
+}
 
