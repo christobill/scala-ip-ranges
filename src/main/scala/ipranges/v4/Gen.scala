@@ -22,7 +22,7 @@ object FakeIP{
     val b = Random.nextInt & 255
     val c = Random.nextInt & 255
     val d = Random.nextInt & 255
-    IP(a << 24 | b << 16 | c << 8 | d)
+    IP(a, b, c, d)
   }
 
   def apply(
@@ -33,7 +33,7 @@ object FakeIP{
     val b = Random.nextInt & 255
     val c = Random.nextInt & 255
     val d = Random.nextInt & 255
-    IP(a << 24 | b << 16 | c << 8 | d)
+    IP(a, b, c, d)
   }
 
   def apply(
@@ -43,7 +43,7 @@ object FakeIP{
              dS : String) :IP = {
     val c = Random.nextInt & 255
     val d = Random.nextInt & 255
-    IP(a << 24 | b << 16 | c << 8 | d)
+    IP(a, b, c, d)
   }
 
   def apply(
@@ -52,7 +52,7 @@ object FakeIP{
              c : Int,
              dS : String) :IP = {
     val d = Random.nextInt & 255
-    IP(a << 24 | b << 16 | c << 8 | d)
+    IP(a, b, c, d)
   }
 }
 
